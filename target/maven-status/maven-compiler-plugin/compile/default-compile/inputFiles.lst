@@ -16,7 +16,6 @@ C:\Users\Fabio\eclipse-workspace\votacaoBackEnd-V1\src\main\java\com\br\stefanin
 C:\Users\Fabio\eclipse-workspace\votacaoBackEnd-V1\src\main\java\com\br\stefanini\votacao\daos\IAssociadoDAO.java
 C:\Users\Fabio\eclipse-workspace\votacaoBackEnd-V1\src\main\java\com\br\stefanini\votacao\exception\NaoGravouArquivoException.java
 C:\Users\Fabio\eclipse-workspace\votacaoBackEnd-V1\src\main\java\com\br\stefanini\votacao\util\Log4jInit.java
-C:\Users\Fabio\eclipse-workspace\votacaoBackEnd-V1\src\main\java\com\br\stefanini\votacao\util\Swagger2UiConfiguration.java
 C:\Users\Fabio\eclipse-workspace\votacaoBackEnd-V1\src\main\java\com\br\stefanini\votacao\dtos\ResultadoVotacaoDTO.java
 C:\Users\Fabio\eclipse-workspace\votacaoBackEnd-V1\src\main\java\com\br\stefanini\votacao\daos\IContabilizacaoDAO.java
 C:\Users\Fabio\eclipse-workspace\votacaoBackEnd-V1\src\main\java\com\br\stefanini\votacao\controllers\TesteAplicacaoControllerResource.java
@@ -30,6 +29,7 @@ C:\Users\Fabio\eclipse-workspace\votacaoBackEnd-V1\src\main\java\com\br\stefanin
 C:\Users\Fabio\eclipse-workspace\votacaoBackEnd-V1\src\main\java\com\br\stefanini\votacao\enums\EnumVoto.java
 C:\Users\Fabio\eclipse-workspace\votacaoBackEnd-V1\src\main\java\com\br\stefanini\votacao\util\PropertiesReader.java
 C:\Users\Fabio\eclipse-workspace\votacaoBackEnd-V1\src\main\java\com\br\stefanini\votacao\bos\ContabilizacaoBO.java
+C:\Users\Fabio\eclipse-workspace\votacaoBackEnd-V1\src\main\java\com\br\stefanini\votacao\Swagger2UiConfiguration.java
 C:\Users\Fabio\eclipse-workspace\votacaoBackEnd-V1\src\main\java\com\br\stefanini\votacao\daos\AssociadoDAO.java
 C:\Users\Fabio\eclipse-workspace\votacaoBackEnd-V1\src\main\java\com\br\stefanini\votacao\exception\BDException.java
 C:\Users\Fabio\eclipse-workspace\votacaoBackEnd-V1\src\main\java\com\br\stefanini\votacao\exception\ProcessamentoException.java
