@@ -52,7 +52,7 @@ public class GerenciaVotacaoController implements IGerenciaVotacaoController{
 			 associadoDTO = AssociadoBO.getInstance().selectAssociado(cpfAssoc);
 			
 		}catch (NegocioException e) {			
-			logger.error("Erro ao consultar o serviço: api/votacao/users/{cpfAssoc}");
+			logger.error("Erro ao consultar o serviço: api/votacao/users/{cpfAssoc} => " + e.getMessage());
 		}
 		
 		if(associadoDTO.getIdAssociado()!=null) {
@@ -81,7 +81,7 @@ public class GerenciaVotacaoController implements IGerenciaVotacaoController{
 			 retornoDTO.setMensagensRetorno("Inserção realizada com sucesso!!!");
 		}catch (NegocioException e) {	
 			retornoDTO.setMensagensRetorno(e.getMessage());
-			logger.error("Erro ao consultar o serviço: api/votacao/pauta/{nomePauta}");
+			logger.error("Erro ao consultar o serviço: api/votacao/pauta/{nomePauta} => " + e.getMessage());
 		}
 		
 		return ResponseEntity.ok(retornoDTO);
@@ -113,7 +113,7 @@ public class GerenciaVotacaoController implements IGerenciaVotacaoController{
 		}catch (NegocioException e) {	
 			
 			retornoDTO.setMensagensRetorno(e.getMessage());
-			logger.error("Erro ao consultar o serviço: api/votacao/vatar");
+			logger.error("Erro ao consultar o serviço: api/votacao/vatar => " + e.getMessage());
 		}	
 		
 		return ResponseEntity.ok(retornoDTO);
@@ -135,7 +135,7 @@ public class GerenciaVotacaoController implements IGerenciaVotacaoController{
 		}catch (NegocioException e) {	
 			
 			retornoDTO.setMensagensRetorno(e.getMessage());
-			logger.error("Erro ao consultar o serviço::: api/votacao/resultado/votacao");
+			logger.error("Erro ao consultar o serviço::: api/votacao/resultado/votacao => " + e.getMessage());
 		}	
 		
 		return ResponseEntity.ok(retornoDTO);
