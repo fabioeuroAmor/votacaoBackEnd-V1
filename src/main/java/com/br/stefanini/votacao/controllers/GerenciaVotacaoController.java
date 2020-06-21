@@ -17,7 +17,7 @@ import com.br.stefanini.votacao.exception.BDException;
 import com.br.stefanini.votacao.exception.NegocioException;
 
 @RestController
-@RequestMapping("/api/votacao")
+@RequestMapping("/api/votacao/v1")
 public class GerenciaVotacaoController implements IGerenciaVotacaoController{
 
 	@Override
