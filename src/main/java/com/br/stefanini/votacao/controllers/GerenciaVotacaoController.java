@@ -1,5 +1,7 @@
 package com.br.stefanini.votacao.controllers;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,10 +17,13 @@ import com.br.stefanini.votacao.dtos.PautaDTO;
 import com.br.stefanini.votacao.dtos.RetornoDTO;
 import com.br.stefanini.votacao.exception.BDException;
 import com.br.stefanini.votacao.exception.NegocioException;
+import com.br.stefanini.votacao.util.Log4j2DemoApplication;
 
 @RestController
 @RequestMapping("/api/votacao/v1")
 public class GerenciaVotacaoController implements IGerenciaVotacaoController{
+	
+	private static final Logger logger = LogManager.getLogger(GerenciaVotacaoController.class);
 
 	@Override
 	@RequestMapping(value = "/associado/{cpfAssoc}", method = RequestMethod.GET)
@@ -32,7 +37,7 @@ public class GerenciaVotacaoController implements IGerenciaVotacaoController{
 			dadosDoBanco.append(" CPF: " + associadoDTO.getCpf());
 			dadosDoBanco.append(" NOME: " + associadoDTO.getNome());			
 		} catch (NegocioException e) {			
-			System.err.println("Erro ao consultar o serviço: api/votacao/associado/{cpfAssoc}");
+			logger.error("Erro ao consultar o serviço: api/votacao/associado/{cpfAssoc}");
 		}
 		return ResponseEntity.ok(" "+ dadosDoBanco );
 	}
@@ -47,7 +52,7 @@ public class GerenciaVotacaoController implements IGerenciaVotacaoController{
 			 associadoDTO = AssociadoBO.getInstance().selectAssociado(cpfAssoc);
 			
 		}catch (NegocioException e) {			
-			System.err.println("Erro ao consultar o serviço: api/votacao/users/{cpfAssoc}");
+			logger.error("Erro ao consultar o serviço: api/votacao/users/{cpfAssoc}");
 		}
 		
 		if(associadoDTO.getIdAssociado()!=null) {
@@ -76,7 +81,7 @@ public class GerenciaVotacaoController implements IGerenciaVotacaoController{
 			 retornoDTO.setMensagensRetorno("Inserção realizada com sucesso!!!");
 		}catch (NegocioException e) {	
 			retornoDTO.setMensagensRetorno(e.getMessage());
-			System.err.println("Erro ao consultar o serviço: api/votacao/pauta/{nomePauta}");
+			logger.error("Erro ao consultar o serviço: api/votacao/pauta/{nomePauta}");
 		}
 		
 		return ResponseEntity.ok(retornoDTO);
@@ -92,6 +97,8 @@ public class GerenciaVotacaoController implements IGerenciaVotacaoController{
 		RetornoDTO retornoDTO = new RetornoDTO();
 		
 		try {
+			
+			
 			pautaDTO.setNmPauta(nomePauta);
 			associadoDTO.setCpf(cpfAssoc);
 			
@@ -106,7 +113,7 @@ public class GerenciaVotacaoController implements IGerenciaVotacaoController{
 		}catch (NegocioException e) {	
 			
 			retornoDTO.setMensagensRetorno(e.getMessage());
-			System.err.println("Erro ao consultar o serviço: api/votacao/vatar");
+			logger.error("Erro ao consultar o serviço: api/votacao/vatar");
 		}	
 		
 		return ResponseEntity.ok(retornoDTO);
@@ -128,7 +135,7 @@ public class GerenciaVotacaoController implements IGerenciaVotacaoController{
 		}catch (NegocioException e) {	
 			
 			retornoDTO.setMensagensRetorno(e.getMessage());
-			System.err.println("Erro ao consultar o serviço::: api/votacao/resultado/votacao");
+			logger.error("Erro ao consultar o serviço::: api/votacao/resultado/votacao");
 		}	
 		
 		return ResponseEntity.ok(retornoDTO);
