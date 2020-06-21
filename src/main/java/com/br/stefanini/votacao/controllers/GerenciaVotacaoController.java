@@ -128,7 +128,7 @@ public class GerenciaVotacaoController implements IGerenciaVotacaoController{
 		}catch (NegocioException e) {	
 			
 			retornoDTO.setMensagensRetorno(e.getMessage());
-			System.err.println("Erro ao consultar o serviço: api/votacao/resultado/votacao");
+			System.err.println("Erro ao consultar o serviço::: api/votacao/resultado/votacao");
 		}	
 		
 		return ResponseEntity.ok(retornoDTO);
