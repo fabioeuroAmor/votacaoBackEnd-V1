@@ -19,6 +19,9 @@ import com.br.stefanini.votacao.exception.BDException;
 import com.br.stefanini.votacao.exception.NegocioException;
 import com.br.stefanini.votacao.util.Log4j2DemoApplication;
 
+import io.swagger.annotations.Api;
+
+@Api(value = "GerenciaVotacaoController", description = "REST APIs votacao!!!!")
 @RestController
 @RequestMapping("/api/votacao/v1")
 public class GerenciaVotacaoController implements IGerenciaVotacaoController{

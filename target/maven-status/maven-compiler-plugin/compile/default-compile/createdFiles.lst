@@ -38,6 +38,7 @@ com\br\stefanini\votacao\util\PropertiesReader.class
 com\br\stefanini\votacao\bos\ContabilizacaoBO.class
 com\br\stefanini\votacao\controllers\IGerenciaVotacaoController.class
 com\br\stefanini\votacao\daos\IContabilizacaoDAO.class
+com\br\stefanini\votacao\Swagger2UiConfiguration.class
 com\br\stefanini\votacao\daos\IAssociadoDAO.class
 com\br\stefanini\votacao\util\WriterXML.class
 com\br\stefanini\votacao\bos\PautaBO.class
